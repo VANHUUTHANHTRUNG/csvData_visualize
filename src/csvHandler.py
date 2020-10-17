@@ -16,13 +16,19 @@ headers = ["char", "time", "c_1", "c_2",
            "point_6", 'point_7', 'point_8', 'point_9', 'point_10', 'point_11',
            'point_12', 'point_13', 'point_14', 'point_15', 'point_16', 'point_17']
 
-if __name__ == "__main__":
-    print("reading csv: ", data_path)
-    data = pd.DataFrame(pd.read_csv(data_path, names=headers))
+
+def csv_read(path):
+    print("reading csv: ", path)
+    data = pd.DataFrame(pd.read_csv(path, names=headers))
     data['time'] = pd.to_datetime(data['time']).values.astype(np.int64)
     means = pd.DataFrame(data['time'])
     for i in range(3):
         test = data.iloc[:, 4 + 6 * i:4 + 6 * (i + 1)].mean(axis=1)
         means = pd.concat([means, test], axis=1)
     means.set_index('time', inplace=True)
+    return means
+
+
+if __name__ == "__main__":
+    means = csv_read(data_path)
     print(means)
