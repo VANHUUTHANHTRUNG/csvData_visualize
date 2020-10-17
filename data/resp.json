@@ -1,0 +1,38 @@
+{
+  "Records": [
+    {
+      "eventVersion": "2.1",
+      "eventSource": "aws:s3",
+      "awsRegion": "eu-north-1",
+      "eventTime": "2020-10-10T11:06:06.426Z",
+      "eventName": "ObjectCreated:Put",
+      "userIdentity": {
+        "principalId": "A1IMXP2JVD23K0"
+      },
+      "requestParameters": {
+        "sourceIPAddress": "130.233.138.123"
+      },
+      "responseElements": {
+        "x-amz-request-id": "B4EEABE4155AD813",
+        "x-amz-id-2": "xU4AxGngGRCTTtMV23SEnLvZ2GbgwBhUrCmg+lx2vH+CJV6Ceck3+kG9aPmq8XnFCsYZ1oC3r7c3GWWEhX24XgAnjkX407WalrFhd9/7WBE="
+      },
+      "s3": {
+        "s3SchemaVersion": "1.0",
+        "configurationId": "356fe708-b2a5-47fa-a547-6f087fc4eac1",
+        "bucket": {
+          "name": "remos-raw-csv",
+          "ownerIdentity": {
+            "principalId": "A1IMXP2JVD23K0"
+          },
+          "arn": "arn:aws:s3:::remos-raw-csv"
+        },
+        "object": {
+          "key": "kemi_raw.csv",
+          "size": 540254,
+          "eTag": "58c31579537d27147627753c063b0b87",
+          "sequencer": "005F8195A3F42E8DA8"
+        }
+      }
+    }
+  ]
+}
